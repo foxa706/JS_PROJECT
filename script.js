@@ -35,7 +35,7 @@ var loadEst = function(utc){
 		}
 
 		console.log(estSetHour);
-		$('#sunsetTime').html('<div id = "sunsetTime">'+"Sunset is at: "+ estSetHour +":"+ tensMinute + onesMinute+ " PM"+'</div>');
+		$('#sunsetTime').html('<h3 id = "sunsetTime">'+"SUNSET IS AT "+ estSetHour +":"+ tensMinute + onesMinute+ " PM"+'</h3>');
 
 };
 
@@ -63,7 +63,7 @@ var setViz = function(degree){
 	var degree = month * 30;
 	var rotate = function(){
 		console.log("rotating " + degree + " degrees");
-		$('#svgTest').rotate(degree);
+		$('#starChart').rotate(degree);
 	};
 	rotate();
 	getApi();
@@ -74,45 +74,44 @@ var getMonthDay = function(){
 	day = $( ".day" ).val();
 	
 	if(month === "01"){
-		var pMonth = "January";
+		var pMonth = "JANUARY";
 	}
 	else if(month === "02"){
-		var pMonth = "February";
+		var pMonth = "FEBRUARY";
 	}
 	else if(month === "03"){
-		var pMonth = "March";
+		var pMonth = "MARCH";
 	}
 	else if(month === "04"){
-		var pMonth = "April";
+		var pMonth = "APRIL";
 	}
 	else if(month === "05"){
-		var pMonth = "May";
+		var pMonth = "MAY";
 	}
 	else if(month === "06"){
-		var pMonth = "June";
+		var pMonth = "JUNE";
 	}
 	else if(month === "07"){
-		var pMonth = "July";
+		var pMonth = "JULY";
 	}
 	else if(month === "08"){
-		var pMonth = "August";
+		var pMonth = "AUGUST";
 	}
 	else if(month === "09"){
-		var pMonth = "September";
+		var pMonth = "SEPTEMBER";
 	}
 	else if(month === "10"){
-		var pMonth = "October";
+		var pMonth = "OCTOBER";
 	}
 	else if(month === "11"){
-		var pMonth = "November";
+		var pMonth = "NOVEMBER";
 	}
 	else{
-		var pMonth = "December";
+		var pMonth = "DECEMBER";
 	};
 
 	console.log( "Getting sunset and stars for " + pMonth + ", " + day +".");
-	$('#pMonth').html('<h2 id = "pMonth">'+ pMonth +'</h2>');
-	$('#pDay').html('<h2 id = "pDay">'+day+'</h2>');
+	$('#date').html('<h2 id = "pMonthDay"> NIGHT SKY FOR 40.71&#176;N, -74&#176;W: ' + pMonth +" "+ day+'</h2>');
 
 	console.log(degree);
 	setViz(degree);
