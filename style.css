@@ -3,19 +3,12 @@
 
 body{
 	background-color: #353535;
+	margin:0;
+	padding:0;
 
 }
 
-#coverImg{
-	margin-top: -20px;
-	height:100%; 
-	width:100%;
-	background-image: url("bg.png");
-	background-size: cover;
-	z-index: 1000;
-}
 #StarBox{
-
 }
 
 #starChart{
@@ -53,6 +46,16 @@ h3{
 	height: 300px;
 	margin-left: 30px;
 	margin-top: 40px;
+}
+
+#coverImg{
+	margin-top:-40;
+	padding:0;
+	height:100%; 
+	width:100%;
+	background-image: url("bg.png");
+	background-size: cover;
+	z-index: 1000;
 }
 
 #date{
